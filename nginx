@@ -2,6 +2,6 @@
   server_name sql-talk.j0.hn;
   listen 80;
 
-  root /apps/sql-talk/public;
+  root /apps/sql-talk;
   index index.html index.htm;
 }
