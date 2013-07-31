@@ -1,0 +1,81 @@
+/**
+ * @blue:       #469AB8;
+ * @blue-dark:  #063C60;
+ * @red:        #E95151;
+ * @green:      #6AC39B;
+ * @white:      #FFFCF4;
+ * @off-gray:   #3F3E3B;
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+  background: #FFFCF4;
+  color: #3F3E3B;
+  
+  font-family: 'Roboto';
+  font-size: 1.4em;
+  line-height: 1.8em;
+}
+
+a {
+  color: #469ab8;
+}
+
+em {
+  color: #6AC39B;
+}
+
+.script {
+  font-family: 'Damion';
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+  width: 1000px;
+  height: 800px;
+  background: #FFFCF4;
+}
+
+.slide.active {
+  box-shadow: 0 0 16px rgba(0,0,0, 0.4);
+}
+
+.slide .content-wrapper {
+  padding: 20px;
+}
+
+.slide footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  font-size: 1.3em;
+}
+
+.slide-points {
+  font-size: 1.1em;
+}
+
+.title {
+  width: 100%;
+  color: #FFFCF4;
+  margin-top: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  font-size: 2em;
+  line-height: 1em;
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  background: #E95151;
+}
+
+.sub-title {
+  font-family: 'Roboto Slab';
+  font-size: 1.8em;
+  margin-bottom: 1em;
+  /*color: #063C60;*/
+}

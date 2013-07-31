@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900,100italic,900italic,700italic,500italic,400italic,300italic|Roboto+Slab:400,100,300,700|Damion' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        impress().init();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="impress">
+      <div id="introduction" class="step slide" data-x="0" ata-y="-1500">
+        <h1 class="title">Taming Complexity of Database Queries in Node.js</h1>
+
+        <div class="content-wrapper">
+          <h2 class="sub-title">Hi, I'm John Fawcett</h2>
+
+          <ul class="slide-points">
+            <li>Dev@<a href="http://goodybag.com">Goodybag</a></li>
+            <li>Built Goodybag's REST API with Node + Postgres</li>
+            <li>Not a DB expert, but I'm alright</li>
+          </ul>
+        </div>
+
+        <footer>
+          <div class="content-wrapper">
+            <em class="script">Ok, kids. Let's go! <i class="icon-arrow-right"></i></em>
+          </div>
+        </footer>
+      </div>
+
+      <div id="why-is-mongo-great" class="step slide" data-x="1400" data-z="0" ata-y="-1500" data-perspective="0" data-rotate-y="0">
+        <h1 class="title">Why is Mongo Great?</h1>
+
+        <div class="content-wrapper">
+          <ul class="slide-points">
+            <li>JavaScript all the way down</li>
+            <li>Results are already JSON</li>
+            <li>Mongo shell is nice</li>
+            <li>Fast to setup</li>
+            <li>Well-documented</li>
+            <li>Queries built with JS primitives</li>
+            <li>Great for flex schemas</li>
+            <li>Learnboost did it</li>
+          </ul>
+          <a href="ex-1.html" target="_blank">Code Sample</a>
+        </div>
+
+        <footer>
+          <div class="content-wrapper">
+            <em class="script">Next up, a dog eats scrambled eggs! <i class="icon-arrow-right"></i></em>
+          </div>
+        </footer>
+      </div>
+
+      <div id="why-does-mongo-suck" class="step slide" data-x="1400" ata-y="-1500" data-perspective="0" data-rotate-y="180" data-z="-1">
+        <h1 class="title">Why does Mongo Suck?</h1>
+
+        <div class="content-wrapper">
+          <ul class="slide-points">
+            <li>No transactions</li>
+            <li>No joining</li>
+            <li>Database locking on like EVERYTHING</li>
+            <li>Non-trivial use-cases can be really slow</li>
+          </ul>
+        </div>
+
+        <footer>
+          <div class="content-wrapper">
+            <em class="script">Next up, Ed finds a wife and more! <i class="icon-arrow-right"></i></em>
+          </div>
+        </footer>
+      </div>
+      <div id="enter-postgres" class="step slide" data-x="2800" ata-y="-1500" data-perspective="0" data-rotate-z="180" data-rotate-y="180" data-z="0">
+        <h1 class="title">Enter Postgres</h1>
+
+        <div class="content-wrapper">
+          <h2 class="sub-title">Take the good, drop the bad</h2>
+
+          <ul class="slide-points">
+            <li>Relational</li>
+            <li>Transactions</li>
+            <li>JSON Support (flexible schemas)</li>
+            <li><a href="http://thebuild.com/presentations/pg-as-nosql-pgday-fosdem-2013.pdf" target="_blank">Pretty darn fast</a> (Page 39)</li>
+            <li>Widely used</li>
+          </ul>
+
+          <a href="ex-2.html" target="_blank">What does it look like in node?</a>
+        </div>
+
+        <footer>
+          <div class="content-wrapper">
+            <em class="script">Next up, an elephant gets stuck on a train! <i class="icon-arrow-right"></i></em>
+          </div>
+        </footer>
+      </div>
+
+      <div id="sql-tools" class="step slide" data-x="4000" data-y="500" data-perspective="0" data-rotate-z="180" data-rotate-y="180" data-z="0">
+        <h1 class="title">SQL Tools</h1>
+
+        <div class="content-wrapper">
+          <h2 class="sub-title">Don't write SQL strings in JS - Use:</h2>
+
+          <ul class="slide-points">
+            <li>Node SQL (<a href="ex-3.html" target="_blank">See Code</a>)</li>
+            <li>Silly SQL (<a href="ex-4.html" target="_blank">See Code</a>)</li>
+            <li>
+              MongoSQL
+              <ul>
+                <li><a href="ex-5.html" target="_blank">Example 1</a></li>
+                <li><a href="ex-6.html" target="_blank">Example 2</a></li>
+                <li><a href="ex-7.html" target="_blank">Example 3</a></li>
+                <li><a href="ex-8.html" target="_blank">Example 4</a></li>
+                <li><a href="ex-9.html" target="_blank">Example 5</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <footer>
+          <div class="content-wrapper">
+            <em class="script">Next up, what are these messages down here?! <i class="icon-arrow-right"></i></em>
+          </div>
+        </footer>
+      </div>
+
+      <div id="what-is-it-good-for" class="step slide" data-x="4000" data-y="500" data-perspective="0" data-rotate-z="0" data-rotate-y="0" data-z="1">
+        <h1 class="title">MongoSQL: What is it good for?</h1>
+
+        <div class="content-wrapper">
+          <ul class="slide-points">
+            <li>Not for easier SQL writing</li>
+            <li>It's for easier SQL reasoning inside of code</li>
+            <li>Your query becomes a value</li>
+            <li>Makes SQL composable and extensible</li>
+          </ul>
+        </div>
+
+        <footer>
+          <div class="content-wrapper">
+            <em class="script">Next up, a dog on the internet! <i class="icon-arrow-right"></i></em>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="js/impress.js"></script>
+  </body>
+</html>
