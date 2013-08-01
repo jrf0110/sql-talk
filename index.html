@@ -17,7 +17,7 @@
   <body>
     <div id="impress">
       <div id="introduction" class="step slide" data-x="0" ata-y="-1500">
-        <h1 class="title">Taming Complexity of Database Queries in Node.js</h1>
+        <h1 class="title">Taming the Complexity of Database Queries in Node.js</h1>
 
         <div class="content-wrapper">
           <h2 class="sub-title">Hi, I'm John Fawcett</h2>
@@ -79,6 +79,8 @@
         </footer>
       </div>
       <div id="enter-postgres" class="step slide" data-x="2800" ata-y="-1500" data-perspective="0" data-rotate-z="180" data-rotate-y="180" data-z="0">
+        <img src="elephant.jpg" id="crazy-elephant">
+
         <h1 class="title">Enter Postgres</h1>
 
         <div class="content-wrapper">
@@ -102,7 +104,7 @@
         </footer>
       </div>
 
-      <div id="sql-tools" class="step slide" data-x="4000" data-y="500" data-perspective="0" data-rotate-z="180" data-rotate-y="180" data-z="0">
+      <div id="sql-tools" class="step slide" data-x="7000" data-y="500" data-perspective="0" data-rotate-z="180" data-rotate-y="180" data-z="0">
         <h1 class="title">SQL Tools</h1>
 
         <div class="content-wrapper">
@@ -131,7 +133,7 @@
         </footer>
       </div>
 
-      <div id="what-is-it-good-for" class="step slide" data-x="4000" data-y="500" data-perspective="0" data-rotate-z="0" data-rotate-y="0" data-z="1">
+      <div id="what-is-it-good-for" class="step slide" data-x="7000" data-y="500" data-perspective="0" data-rotate-z="0" data-rotate-y="0" data-z="1">
         <h1 class="title">MongoSQL: What is it good for?</h1>
 
         <div class="content-wrapper">
@@ -139,13 +141,120 @@
             <li>Not for easier SQL writing</li>
             <li>It's for easier SQL reasoning inside of code</li>
             <li>Your query becomes a value</li>
+            <li>Robust helper interface - your use-case is supported</li>
             <li>Makes SQL composable and extensible</li>
+            <li>Helps tame queries <a href="ex-10.html">like this</a></li>
+            <li>Helps you build your <em>own</em> tools when rolling your own is necessary</li>
           </ul>
         </div>
 
         <footer>
           <div class="content-wrapper">
             <em class="script">Next up, a dog on the internet! <i class="icon-arrow-right"></i></em>
+          </div>
+        </footer>
+      </div>
+
+      <div id="closing-the-gaps" class="step slide" data-x="7000" data-y="500" data-perspective="0" data-rotate-z="0" data-rotate-y="0" data-z="-2200">
+        <h1 class="title">Closing the Gaps and the Mental Leaps</h1>
+
+        <div class="content-wrapper">
+          <ul class="slide-points">
+            <li>MoSQL brings it back to JavaScript</li>
+            <li>Further decreases the mental gap between database and code</li>
+          </ul>
+        </div>
+
+        <footer>
+          <div class="content-wrapper">
+            <em class="script">Next up, a chipmunk, squirrel, and bulldog! <i class="icon-arrow-right"></i></em>
+          </div>
+        </footer>
+      </div>
+
+      <div id="what-about-orms" class="step slide" data-x="7000" data-y="500" data-perspective="0" data-rotate-z="0" data-rotate-y="0" data-z="-4200">
+        <h1 class="title">What About ORMS?</h1>
+
+        <div class="content-wrapper">
+          <ul class="slide-points">
+            <li>MoSQL &amp;&amp; ORMs not mutually exclusive</li>
+            <li>
+              Sequelize.js - great monolithic choice
+              <ul>
+                <li><em>As there are often use cases in which it is just easier to execute raw / already prepared SQL queries, you can utilize the function sequelize.query</em></li>
+              </ul>
+            </li>
+            <li>The need for an ORM is partially obviated in JS</li>
+            <li>Often, ORMs complect a situation more than simplify it</li>
+            <li>MoSQL can help you build your own ORM</li>
+          </ul>
+        </div>
+
+        <footer>
+          <div class="content-wrapper">
+            <em class="script">Next up, a chipmunk, squirrel, and bulldog! <i class="icon-arrow-right"></i></em>
+          </div>
+        </footer>
+      </div>
+
+      <div id="how-can-it-help" class="step slide" data-x="7000" data-y="500" data-perspective="0" data-rotate-z="0" data-rotate-y="0" data-z="-4200">
+        <h1 class="title">Example: When SQL Attacks</h1>
+
+        <div class="content-wrapper">
+          <ul class="slide-points">
+            <li>New features need to be added</li>
+            <li>
+              How do we organize <em>monsterous</em> queries?
+              <ul>
+                <li>Proper logic chunking</li>
+              </ul>
+            </li>
+            <li>
+              Maybe your API needs to be slightly denormalized
+              <ul>
+                <li>Without degrading performance</li>
+              </ul>
+            </li>
+            <li>
+              In Sequelize, you'd probably write batch queries (with bad performance)
+              <ul>
+                <li>Use-case isn't supported, so you end up writing SQL anyway</li>
+              </ul>
+            </li>
+            <li>
+              <a href="ex-11.html">Use MoSQL to help</a>
+            </li>
+          </ul>
+        </div>
+
+        <footer>
+          <div class="content-wrapper">
+            <em class="script">Next up, will this guy ever finish?! <i class="icon-arrow-right"></i></em>
+          </div>
+        </footer>
+      </div>
+
+      <div id="conclusion" class="step slide" data-x="7000" data-y="500" data-perspective="0" data-rotate-z="0" data-rotate-y="0" data-z="2200">
+        <h1 class="title">Conclusion</h1>
+
+        <div class="content-wrapper">
+          <ul class="slide-points">
+            <li>In the end, I use a combination of Silly and MoSQL</li>
+            <li>Use Postgres and MoSQL - close the mental gap</li>
+            <li>MoSQL is super extensible, composable, and supports a lot of use cases</li>
+            <li>Database queries as a simple, reflectable data structure</li>
+            <li>
+              Helps build your own tools and separate your logic
+              <ul>
+                <li>Recent project: generic middleware and ORM-ish tools</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <footer>
+          <div class="content-wrapper">
+            <em class="script">Next up, questions?! <i class="icon-arrow-right"></i></em>
           </div>
         </footer>
       </div>

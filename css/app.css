@@ -33,7 +33,6 @@ em {
 
 .slide {
   position: relative;
-  overflow: hidden;
   width: 1000px;
   height: 800px;
   background: #FFFCF4;
@@ -78,4 +77,11 @@ em {
   font-size: 1.8em;
   margin-bottom: 1em;
   /*color: #063C60;*/
+}
+
+#crazy-elephant {
+  position: absolute;
+  top: -340px;
+  right: -1800px;
+  width: 800px;
 }
